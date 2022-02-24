@@ -12,15 +12,15 @@
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="HuaLiMao-AQ的小站" type="application/atom+xml">
-  <meta name="description" content="Step: 1.安装repo 2.同步编译所需依赖 3.设置Git信息 4.同步源码 5.同步设备树  具体实行:  1.安装repo 使用以下命令下载repo工具 1234mkdir ~&#x2F;binPATH&#x3D;~&#x2F;bin:$PATHcurl https:&#x2F;&#x2F;storage.googleapis.com&#x2F;git-repo-downloads&#x2F;repo &gt; ~&#x2F;bin&#x2F;repochmod a+x">
+  <meta name="description" content="Step: 1.安装repo 2.同步编译所需依赖 3.设置Git信息 4.同步源码 5.同步设备树 5.开始编译  具体实行:  1.安装repo 使用以下命令下载repo工具 1234mkdir ~&#x2F;binPATH&#x3D;~&#x2F;bin:$PATHcurl https:&#x2F;&#x2F;storage.googleapis.com&#x2F;git-repo-downloads&#x2F;repo &gt; ~&#x2F;bin&#x2F;repochm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android类原生">
 <meta property="og:url" content="https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/index.html">
 <meta property="og:site_name" content="HuaLiMao-AQ的小站">
-<meta property="og:description" content="Step: 1.安装repo 2.同步编译所需依赖 3.设置Git信息 4.同步源码 5.同步设备树  具体实行:  1.安装repo 使用以下命令下载repo工具 1234mkdir ~&#x2F;binPATH&#x3D;~&#x2F;bin:$PATHcurl https:&#x2F;&#x2F;storage.googleapis.com&#x2F;git-repo-downloads&#x2F;repo &gt; ~&#x2F;bin&#x2F;repochmod a+x">
+<meta property="og:description" content="Step: 1.安装repo 2.同步编译所需依赖 3.设置Git信息 4.同步源码 5.同步设备树 5.开始编译  具体实行:  1.安装repo 使用以下命令下载repo工具 1234mkdir ~&#x2F;binPATH&#x3D;~&#x2F;bin:$PATHcurl https:&#x2F;&#x2F;storage.googleapis.com&#x2F;git-repo-downloads&#x2F;repo &gt; ~&#x2F;bin&#x2F;repochm">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-24T16:35:41.000Z">
-<meta property="article:modified_time" content="2022-02-24T17:31:53.291Z">
+<meta property="article:modified_time" content="2022-02-24T17:49:18.287Z">
 <meta property="article:author" content="HuaLiMao-AQ">
 <meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary">
@@ -172,7 +172,7 @@
   <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-3.png" style="max-height: 240px;">
+      <img src="/images/random/material-12.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">Android类原生</div>
@@ -227,7 +227,8 @@
 2.<a href="#2">同步编译所需依赖</a><br />
 3.<a href="#3">设置Git信息</a><br />
 4.<a href="#4">同步源码</a><br />
-5.<a href="#5">同步设备树</a></p>
+5.<a href="#5">同步设备树</a><br />
+5.<a href="#6">开始编译</a></p>
 <h1 id="具体实行"><a class="markdownIt-Anchor" href="#具体实行"></a> 具体实行:</h1>
 <h2 id="span-id11安装repospan"><a class="markdownIt-Anchor" href="#span-id11安装repospan"></a> <span id="1">1.安装repo</span></h2>
 <p>使用以下命令下载<code>repo</code>工具</p>
@@ -251,6 +252,18 @@
 <h2 id="span-id55同步设备树span"><a class="markdownIt-Anchor" href="#span-id55同步设备树span"></a> <span id="5">5.同步设备树</span></h2>
 <p>请使用<code>git clone</code>将编译所需树同步到相应位置<br />
 一般需要同步Device Tree/Kernel Source/Vendor Tree</p>
+<p>你也可以在<code>.repo</code>目录下创建<code>local-manifest.xml</code>使其自动同步各种Tree<br />
+以<code>atom</code>设备为例</p>
+<p>local-manifest.xml文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">remote</span>  <span class="attr">name</span>=<span class="string">&quot;HuaLiMao-Code&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">fetch</span>=<span class="string">&quot;https://github.com/HuaLiMao-Code/&quot;</span></span></span><br><span class="line"><span class="tag">           <span class="attr">revision</span>=<span class="string">&quot;refs/heads/arrow-12.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        name可以自定义</span></span><br><span class="line"><span class="comment">        fetch是你的仓库地址 </span></span><br><span class="line"><span class="comment">        revision是你需要同步的分支 </span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 同步设备树 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">project</span> <span class="attr">path</span>=<span class="string">&quot;device/xiaomi/atom&quot;</span> <span class="attr">name</span>=<span class="string">&quot;android_device_xiaomi_atom&quot;</span> <span class="attr">remote</span>=<span class="string">&quot;HuaLiMao-Code&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        path是你的Tree存放的位置 </span></span><br><span class="line"><span class="comment">        name是你的Tree远程仓库的名称 </span></span><br><span class="line"><span class="comment">        remote指定该仓库在哪个远程仓库 </span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>default.xml文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">    在&lt;/manifest&gt;前添加此处修改</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 设备树清单 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">name</span>=<span class="string">&quot;local-manifest.xml&quot;</span> /&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="span-id66开始编译span"><a class="markdownIt-Anchor" href="#span-id66开始编译span"></a> <span id="6">6.开始编译</span></h2>
+<p>以<code>ArrowOS</code>为例<br />
+先加载编译环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br></pre></td></tr></table></figure>
+<p>使用以下命令开始编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lunch arrow_(设备代号)-userdebug &amp;&amp; make bacon</span><br></pre></td></tr></table></figure>
 
       
       <blockquote>
