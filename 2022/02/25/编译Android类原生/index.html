@@ -8,19 +8,19 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>Android类原生 | HuaLiMao-AQ的小站</title>
+  <title>编译Android类原生 | HuaLiMao-AQ的小站</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="HuaLiMao-AQ的小站" type="application/atom+xml">
   <meta name="description" content="Step: 1.安装repo 2.同步编译所需依赖 3.设置Git信息 4.同步源码 5.同步设备树 5.开始编译  具体实行:  1.安装repo 使用以下命令下载repo工具 1234mkdir ~&#x2F;binPATH&#x3D;~&#x2F;bin:$PATHcurl https:&#x2F;&#x2F;storage.googleapis.com&#x2F;git-repo-downloads&#x2F;repo &gt; ~&#x2F;bin&#x2F;repochm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android类原生">
-<meta property="og:url" content="https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/index.html">
+<meta property="og:title" content="编译Android类原生">
+<meta property="og:url" content="https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/index.html">
 <meta property="og:site_name" content="HuaLiMao-AQ的小站">
 <meta property="og:description" content="Step: 1.安装repo 2.同步编译所需依赖 3.设置Git信息 4.同步源码 5.同步设备树 5.开始编译  具体实行:  1.安装repo 使用以下命令下载repo工具 1234mkdir ~&#x2F;binPATH&#x3D;~&#x2F;bin:$PATHcurl https:&#x2F;&#x2F;storage.googleapis.com&#x2F;git-repo-downloads&#x2F;repo &gt; ~&#x2F;bin&#x2F;repochm">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-24T16:35:41.000Z">
-<meta property="article:modified_time" content="2022-02-24T17:49:18.287Z">
+<meta property="article:modified_time" content="2022-02-24T17:51:40.879Z">
 <meta property="article:author" content="HuaLiMao-AQ">
 <meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary">
@@ -31,7 +31,7 @@
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="HuaLiMao-AQ的小站">
-  <meta name="msapplication-starturl" content="https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">
+  <meta name="msapplication-starturl" content="https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="HuaLiMao-AQ的小站">
@@ -39,7 +39,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">
+    <link rel="canonical" href="https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">
   
 
   
@@ -172,10 +172,10 @@
   <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-12.png" style="max-height: 240px;">
+      <img src="/images/random/material-2.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-title">Android类原生</div>
+          <div class="mdui-card-primary-title">编译Android类原生</div>
           <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2022-02-25 / <i class="iconfont">&#xe601;</i> HuaLiMao-AQ</div>
         </div>
       </div>
@@ -188,7 +188,7 @@
             
             <li class="mdui-menu-item" disabled>
               
-                <img src="http://qr.liantu.com/api.php?w=246&m=10&text=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">
+                <img src="http://qr.liantu.com/api.php?w=246&m=10&text=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">
               
             </li>
           </ul>
@@ -197,25 +197,25 @@
           <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
           <ul class="mdui-menu" id="share_menu">
             <li class="mdui-menu-item">
-              <a href="http://service.weibo.com/share/share.php?appkey=&title=Android类原生&url=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&pic=https://hualimao-aq.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=编译Android类原生&url=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&pic=https://hualimao-aq.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://twitter.com/intent/tweet?text=Android类原生&url=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&via=HuaLiMao-AQ" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+              <a href="https://twitter.com/intent/tweet?text=编译Android类原生&url=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&via=HuaLiMao-AQ" target="_blank" class="mdui-ripple">分享到 Twitter</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://plus.google.com/share?url=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+              <a href="https://plus.google.com/share?url=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/" target="_blank" class="mdui-ripple">分享到 Google+</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&title=Android类原生" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&title=编译Android类原生" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="http://connect.qq.com/widget/shareqq/index.html?site=HuaLiMao-AQ的小站&title=Android类原生&pics=https://hualimao-aq.github.io/images/favicon.png&url=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=HuaLiMao-AQ的小站&title=编译Android类原生&pics=https://hualimao-aq.github.io/images/favicon.png&url=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/" target="_blank" class="mdui-ripple">分享到 QQ</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://telegram.me/share/url?url=https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&text=Android类原生" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+              <a href="https://telegram.me/share/url?url=https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/&text=编译Android类原生" target="_blank" class="mdui-ripple">分享到 Telegram</a>
             </li>
           </ul>
         
@@ -268,7 +268,7 @@
       
       <blockquote>
         
-        <strong>本文链接：</strong><br><a href="https://hualimao-aq.github.io/2022/02/25/Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">https://hualimao-aq.github.io/2022/02/25/Android类原生/</a>
+        <strong>本文链接：</strong><br><a href="https://hualimao-aq.github.io/2022/02/25/%E7%BC%96%E8%AF%91Android%E7%B1%BB%E5%8E%9F%E7%94%9F/">https://hualimao-aq.github.io/2022/02/25/编译Android类原生/</a>
       </blockquote>
     </div>
     <footer class="mdui-card-actions">
